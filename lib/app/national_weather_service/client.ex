@@ -3,7 +3,7 @@ defmodule App.NationalWeatherService.Client do
   Handles queries to the NWS weather api
   """
   require Logger
-  alias Frontline.NationalWeatherService.Parser
+  alias App.NationalWeatherService.Parser
 
   @service "https://api.weather.gov"
 
@@ -33,7 +33,7 @@ defmodule App.NationalWeatherService.Client do
       grid_forecast_url(id, x, y),
       [
         {"Accept", "application/geo+json"},
-        {"User-Agent", "Frontline Wildfire <software@frontlinewildfire.com>"}
+        {"User-Agent", "App <software@app.com>"}
       ]
     )
     |> Finch.request(HTTPClient)
