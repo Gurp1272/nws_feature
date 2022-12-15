@@ -9,11 +9,11 @@ defmodule App.NationalWeatherService.API do
 
   require Logger
 
-  alias Frontline.Repo
-  alias Frontline.Schema.Property
-  alias Frontline.{AirQuality, WildfireCondition, FireDanger}
-  alias Frontline.NationalWeatherService.Schema.WeatherForecast
-  alias Frontline.NationalWeatherService.{Client, Conditions}
+  alias App.Repo
+  alias App.Schema.Property
+  alias App.{AirQuality, WildfireCondition, FireDanger}
+  alias App.NationalWeatherService.Schema.WeatherForecast
+  alias App.NationalWeatherService.{Client, Conditions}
 
   @doc """
   Meant to only receive indexes that aren't currently present in the weather_forecast table
